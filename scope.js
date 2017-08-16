@@ -51,26 +51,16 @@ function sendDataToClient() {
   var userObject1 = {
     handle: 'morpheus',
     authenticated: false
-    };
+  };
 
   function authenticateUser(obj, username) {
-    if (userObject.handle === username) {
-      userObject.authenticated = true;
-      return userObject;
+    if (obj.handle === username) {
+      obj.authenticated = true;
+      return obj;
     } else {
-      return userObject;
+      return obj;
     }
   }
   authenticateUser(userObject, 'neo');
   return userObject;
 }
-
-
-
-
-
-
-
-
-
-
